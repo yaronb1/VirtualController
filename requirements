@@ -5,3 +5,7 @@ winapi32 (fro windows only)
 subprocess
 sys
 os
+
+download chromedriver
+preferbly add it to your path
+if you dont add it to your path, you can specify its location in the relevant area of the HA.py and youtube.py scripts 
