@@ -1,0 +1,7 @@
+opencv
+mediapipe
+selenium
+winapi32 (fro windows only)
+subprocess
+sys
+os
