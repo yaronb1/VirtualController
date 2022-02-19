@@ -74,11 +74,9 @@ def fin2G(*args):
     print("you")
     controller.cs = 5
     youtubeScreen.start=True
+
     
 def fin3G(*args):
-    print("net")
-    
-def fin4G(*args):
     controller.cs=2
     
 def colour_pallatte(*args):
@@ -194,11 +192,11 @@ def main():
     fin_1= sc.Gesture(gesture=[0,1,0,0,0],func=fin1G)
     fin_2= sc.Gesture(gesture=[0,1,1,0,0],func=fin2G)
     fin_3= sc.Gesture(gesture=[0,1,1,1,0], func=fin3G)
-    fin_4= sc.Gesture(gesture=[0,1,1,1,1], func=fin4G)
+    #fin_4= sc.Gesture(gesture=[0,1,1,1,1], func=fin4G)
     homeScreen.add_gesture(fin_1)
     homeScreen.add_gesture(fin_2)
     homeScreen.add_gesture(fin_3)
-    homeScreen.add_gesture(fin_4)
+    #homeScreen.add_gesture(fin_4)
     
     #cs = 2
     drawScreenMain.add_images('draw_screen_main', size)
@@ -350,6 +348,9 @@ def main():
                 x,y =lmList[8][1],lmList[8][2]
                 args= x,y
 
+
+
+
             # controller.run must be called every frame to check if the gestures or buttons are being pressed
             # args - argguments to be passed to the functions which will be called if a gesture or button is pressed
             # fingers - list in the correct format (obtained from detector.fingercounter) which is the ggesture that is seen
@@ -376,6 +377,7 @@ def main():
             cv2.imshow('ui', screen.ui[screen.cui])
         else:
             cv2.imshow("image", finalI)
+        cv2.setWindowProperty('image', cv2.WND_PROP_TOPMOST, 1)
 
 
         # pressing q will break the loop
