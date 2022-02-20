@@ -4,6 +4,8 @@ This module will use googles mediapipe module to detect and track  hands
 The module creates 21 landmarks on the hand to detect its oriention
 it will return a list of all the landmarks positions in pixel values
 
+This script is based on murtzas workshop youtube tutorials
+
 @author: yaron
 """
 
